@@ -1,0 +1,22 @@
+
+public class RPSLSAldiano {
+
+	public static void main(String[] args) {
+		int x = 8;
+
+		switch (x) {
+		    case 10:
+		       x += 15;
+		       break;
+		    case 12:
+		       x -= 5;
+		       break;
+		    default:
+		       x *= 3;
+		}
+
+		System.out.println(x);
+
+	}
+
+}

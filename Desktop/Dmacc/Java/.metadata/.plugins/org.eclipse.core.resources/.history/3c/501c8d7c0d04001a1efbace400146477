@@ -1,0 +1,14 @@
+
+public class BasketballPlayer extends Player {
+	private double freeThrowPercentage;
+
+	public double getFreeThrowPercentage() {
+		return freeThrowPercentage;
+	}
+
+	public void setFreeThrowPercentage(double freeThrowPercentage) {
+		this.freeThrowPercentage = freeThrowPercentage;
+	}
+	
+
+}

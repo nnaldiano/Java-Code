@@ -1,0 +1,37 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class BankAccountFrame extends JFrame {
+	private JButton Withdraw;
+	private JButton Deposit;
+	private JLabel Amount;
+	private JTextField AmountText;
+	private JLabel Balance;
+	private double balance;
+	
+	private static final int FRAME_WIDTH = 300;
+	private static final int FRAME_HEIGHT = 100;
+	private static final double INITIAL_BALANCE = 1000;
+
+
+public BankAccountFrame() {
+	balance = INITIAL_BALANCE;
+	setSize(FRAME_WIDTH, FRAME_HEIGHT);
+}
+class WithdrawListener implements ActionListener{
+	public void actionPerformed(ActionEvent event) {
+		String a = Amount.getText();
+		double withdrawAmt = Double.parseDouble(a);
+		
+		
+		
+	}
+	
+}
+	
+}

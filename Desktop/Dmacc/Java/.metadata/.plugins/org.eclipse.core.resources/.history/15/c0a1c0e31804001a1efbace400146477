@@ -1,0 +1,28 @@
+
+public class BasketballPlayer extends Player {
+	private double freeThrowPercentage;
+
+	public BasketballPlayer() {
+		setFreeThrowPercentage(freeThrowPercentage);
+	}
+	public BasketballPlayer(double freeThrowPercentage) {
+		super();
+		this.freeThrowPercentage = freeThrowPercentage;
+	}
+	
+	public double getFreeThrowPercentage() {
+		return freeThrowPercentage;
+	}
+
+	public void setFreeThrowPercentage(double freeThrowPercentage) {
+		this.freeThrowPercentage = freeThrowPercentage;
+	}
+	
+	public String formatPlayerinformation() {
+		String Formattedplayer = this.getPlayerNumber() + this.getParticipant() + this.getPosition() + this.getFreeThrowPercentage();
+	return Formattedplayer;
+
+	}
+	
+
+}

@@ -1,0 +1,37 @@
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class OneHundredButtonsAldiano {
+	public static void main(String[] args) {
+		
+		JPanel panel = new JPanel();
+		JButton button = new JButton("Click me!");
+		JLabel label = new JLabel("Hello, World");
+		for(int i = 0; i< 1;i++) {
+			System.out.println("hi");
+			panel.add(button);
+			panel.add(label);
+		}
+		
+		
+		
+		JFrame frame = new JFrame();
+		frame.add(panel);
+	
+		
+
+		final int FRAME_WIDTH = 300;
+		final int FRAME_HEIGHT = 400;
+		frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		frame.setVisible(true);
+		}
+		
+		}
+	
+
+

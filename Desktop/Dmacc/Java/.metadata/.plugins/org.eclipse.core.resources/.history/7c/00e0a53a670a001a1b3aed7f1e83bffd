@@ -1,0 +1,35 @@
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TicketCounterAldiano extends JFrame {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final int FRAME_WIDTH = 100;
+	private static final int FRAME_HEIGHT = 200;
+	final static int TOTAL_TICKETS = 30;
+	final static int MAX_AMOUNT = 5;
+	
+	public TicketCounterAldiano() {
+		createComponents();
+		setSize(FRAME_WIDTH, FRAME_HEIGHT);
+	}
+	private void createComponents() {
+		JButton button = new JButton("Add tickets");
+		JPanel panel = new JPanel();
+		panel.add(button);
+		add(panel);
+		ActionListener listener = new TicketCounterListener();
+		button.addActionListener(listener);
+		
+		
+		
+	}
+
+	
+
+}

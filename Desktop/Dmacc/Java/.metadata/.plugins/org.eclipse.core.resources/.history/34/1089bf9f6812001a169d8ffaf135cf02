@@ -1,0 +1,82 @@
+package Controller;
+import java.awt.event.ActionListener; 
+import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import Model.TicketCounter;
+
+public class TicketCounterPanel extends JPanel {
+	
+	private JLabel Instructions = new JLabel("Enter how many tickets you'd like to purchase (1-6):");
+	private JTextField ticketInput = new JTextField(12);
+	private JButton purchaseTickets = new JButton("Purchase tickets");
+	private JLabel ticketCounter = new JLabel("");
+	private JLabel TICKETS = new JLabel("");
+	private JLabel ticketWarning = new JLabel("");
+	private JButton clearTicket = new JButton("Clear order");
+	
+	TicketCounter ticket = new TicketCounter();
+	
+	public TicketCounterPanel() {
+		add(Instructions);
+		add(ticketInput);
+		add(purchaseTickets);
+		TICKETS.setText(ticket.getTICKET_AMOUNT() + " available tickets.");
+		add(TICKETS);
+		ticketCounter.setText(ticket.getTicketInput());
+		add(ticketCounter);
+		add(ticketWarning);
+		add(clearTicket);
+		
+		
+		purchaseTicketsListener ptl = new purchaseTicketsListener();
+		purchaseTickets.addActionListener(ptl);
+		
+		clearTicketListener ctl = new clearTicketListener();
+		clearTicket.addActionListener(ctl);
+		
+		}
+	class purchaseTicketsListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+		String Userinput = ticketInput.getText();
+		ticketCounter.setText(Userinput);
+		TICKETS.setText(ticket.getTICKET_AMOUNT() + " available tickets.");
+		try {
+			Integer.parseInt(Userinput);
+			if(Integer.parseInt(Userinput) < 1) {
+				ticketInput.setText("");
+				ticketWarning.setVisible(true);
+				ticketWarning.setText("Please enter a ticket amount that is more than 0");
+				
+			}
+		}
+		catch (NumberFormatException e) {
+			ticketCounter.setVisible(false);
+			TICKETS.setVisible(false);
+			ticketWarning.setVisible(true);
+			ticketWarning.setText("Please enter an amount of tickets between 1 and 6");
+		}
+	}
+}
+	class clearTicketListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			ticketInput.setText("");
+			ticketWarning.setVisible(false);
+			ticketCounter.setVisible(true);
+			TICKETS.setVisible(true);
+			ticketCounter.setText("0");
+			
+		}
+		
+	}
+
+}

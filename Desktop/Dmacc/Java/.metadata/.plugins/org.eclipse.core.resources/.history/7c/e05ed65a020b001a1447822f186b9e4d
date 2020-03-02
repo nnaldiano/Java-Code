@@ -1,0 +1,48 @@
+package Controller;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class FormPanel extends JPanel{
+	
+	public FormPanel() {
+		JLabel nameText = new JLabel("  Name: ");
+		JTextField nameField = new JTextField(12);
+		
+		JLabel item1Text = new JLabel("  Item:  ");
+		JTextField item1Field = new JTextField(12);
+		
+		JLabel item2Text = new JLabel("   Item:  ");
+		JTextField item2Field = new JTextField(12);
+		
+		JLabel item3Text = new JLabel("   Item:  ");
+		JTextField item3Field = new JTextField(12);
+		
+		JLabel VerbText = new JLabel("   Verb:  ");
+		JTextField VerbTextField = new JTextField(12);
+		
+		JLabel NounText = new JLabel("   Noun:  ");
+		JTextField NounTextField = new JTextField(12);
+		
+		add(nameText);
+		add(nameField);
+		
+		add(item1Text);
+		add(item1Field);
+		
+		add(item2Text);
+		add(item2Field);
+		
+		add(item3Text);
+		add(item3Field);
+		
+		add(VerbText);
+		add(VerbTextField);
+		
+		add(NounText);
+		add(NounTextField);
+	}
+	
+	
+}

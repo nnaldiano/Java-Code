@@ -1,0 +1,65 @@
+package Controller;
+import java.awt.event.ActionListener; 
+import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import Model.TicketCounter;
+
+public class TicketCounterPanel extends JPanel {
+	
+	private JLabel Instructions = new JLabel("Enter how many tickets you'd like to purchase (1-6):");
+	private JTextField ticketInput = new JTextField(12);
+	private JButton purchaseTickets = new JButton("Purchase tickets");
+	private JLabel ticketCounter = new JLabel("");
+	private JLabel TICKETS = new JLabel("");
+	private JLabel ticketWarning = new JLabel("");
+	
+	TicketCounter ticket = new TicketCounter();
+	
+	public TicketCounterPanel() {
+		add(Instructions);
+		add(ticketInput);
+		add(purchaseTickets);
+		TICKETS.setText(ticket.getTICKET_AMOUNT());
+		add(TICKETS);
+		ticketCounter.setText(ticket.getTicketInput());
+		add(ticketCounter);
+		add(ticketWarning);
+		
+		
+		purchaseTicketsListener ptl = new purchaseTicketsListener();
+		purchaseTickets.addActionListener(ptl);
+		
+		}
+	class purchaseTicketsListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+		String Userinput = ticketInput.getText();
+		ticketCounter.setText(Userinput);
+		TICKETS.setText(ticket.getTICKET_AMOUNT());
+		try {
+			Integer.parseInt(Userinput);
+		}
+		catch (NumberFormatException e) {
+			ticketCounter.setVisible(false);
+			TICKETS.setVisible(false);
+			ticketWarning.setVisible(true);
+			ticketWarning.setText("Please enter an amount of tickets between 1 and 6");
+		}
+		
+		
+
+		
+		
+			
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+
+public class CreditCard extends Card{
+	private String CardNumber;
+	private int CVV;
+	
+	public CreditCard() {
+		super();
+	}
+	
+	public CreditCard(String name, String CardNumber, int CVV) {
+		super(name);
+		this.CardNumber = CardNumber;
+		this.CVV = CVV;
+	}
+	
+	public String getCardNumber() {
+		return CardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		CardNumber = cardNumber;
+	}
+
+	public int getCVV() {
+		return CVV;
+	}
+
+	public void setCVV(int cVV) {
+		CVV = cVV;
+	}
+
+	public String format() {
+		return super.format() + ", Card Number: " + CardNumber + ", CVV; " + CVV;
+	}
+
+}

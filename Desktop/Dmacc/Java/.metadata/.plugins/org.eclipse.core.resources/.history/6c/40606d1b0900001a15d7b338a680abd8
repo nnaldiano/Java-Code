@@ -1,0 +1,42 @@
+package model;
+
+public class Unit extends Property{
+	private double monthlyRent;
+	private int bedrooms;
+	private double bathroom;
+	private boolean isPetfriendly;
+	
+	
+	
+	
+	
+	public Unit(String string, int i, boolean b, double d, int j, double e, boolean c) {
+		super();
+	}
+	
+	
+	public double getMonthlyRent() {
+		return monthlyRent;
+	}
+	public void setMonthlyRent(double monthlyRent) {
+		this.monthlyRent = monthlyRent;
+	}
+	public int getBedrooms() {
+		return bedrooms;
+	}
+	public void setBedrooms(int bedrooms) {
+		this.bedrooms = bedrooms;
+	}
+	public double getBathroom() {
+		return bathroom;
+	}
+	public void setBathroom(double bathroom) {
+		this.bathroom = bathroom;
+	}
+	public boolean isPetfriendly() {
+		return isPetfriendly;
+	}
+	public void setPetfriendly(boolean isPetfriendly) {
+		this.isPetfriendly = isPetfriendly;
+	}
+}

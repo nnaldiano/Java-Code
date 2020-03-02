@@ -1,0 +1,9 @@
+
+public class PlayerTesterAldiano {
+	public static void main(String[] args) {
+		BaseballPlayer baseballPlayer = new BaseballPlayer(17, "Babe Ruth", "Pitcher", 0.312);
+		
+		
+		
+	}
+}

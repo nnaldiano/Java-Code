@@ -1,0 +1,31 @@
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class ChartComponent4 extends JFrame {
+	
+	private static final int FRAME_WIDTH = 400;
+	private static final int FRAME_WEIGHT = 400;
+	
+	private static final int CHART_WIDTH = 300;
+	private static final int CHART_HEIGHT = 300;
+
+	private static final double DEFAULT_RATE = 5;
+	private static final double INITIAL_BALANCE = 1000;
+	
+	private JLabel rateLabel;
+	private JTextField rateField;
+	private JButton button;
+	private ChartComponent chart;
+	private double balance;
+	
+	public ChartComponent4() {
+		balance = INITIAL_BALANCE;
+		chart = new ChartComponent(3*INITIAL_BALANCE);
+	}
+}

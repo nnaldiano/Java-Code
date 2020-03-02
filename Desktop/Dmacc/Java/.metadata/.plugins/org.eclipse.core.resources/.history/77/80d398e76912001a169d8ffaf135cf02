@@ -1,0 +1,21 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import Controller.TicketCounterPanel;
+import Model.TicketCounter;
+public class StartTicketCounter {
+	public static void main(String[] args) {
+	
+	
+	JFrame frame = new JFrame();
+	JFrame.setDefaultLookAndFeelDecorated(true);
+	JPanel panel = new TicketCounterPanel();
+	panel.setLayout(new FlowLayout());
+	frame.add(panel);
+	frame.setSize(400,350);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setVisible(true);
+	
+	}
+
+}

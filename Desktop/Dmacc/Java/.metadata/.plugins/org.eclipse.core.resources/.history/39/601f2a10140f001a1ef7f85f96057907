@@ -1,0 +1,14 @@
+package frame;
+import javax.swing.JFrame;
+
+import control.BankAccount;
+public class BankAccountViewer {
+	public static void main(String[] args) {
+		BankAccount Noah = new BankAccount(1000);
+		JFrame frame = new BankAccountFrame(Noah);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+	}
+
+}

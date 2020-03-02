@@ -1,0 +1,10 @@
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class StopLightPanel extends JPanel {
+	
+	public StopLightPanel() {
+		JButton changeButton = new JButton("Switch");
+	}
+
+}

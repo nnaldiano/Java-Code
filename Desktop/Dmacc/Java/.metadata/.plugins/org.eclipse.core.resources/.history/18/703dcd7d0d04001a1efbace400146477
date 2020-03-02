@@ -1,0 +1,14 @@
+
+public class BaseballPlayer extends Player {
+	private double battingAverage;
+
+	public double getBattingAverage() {
+		return battingAverage;
+	}
+
+	public void setBattingAverage(double battingAverage) {
+		this.battingAverage = battingAverage;
+	}
+
+
+}

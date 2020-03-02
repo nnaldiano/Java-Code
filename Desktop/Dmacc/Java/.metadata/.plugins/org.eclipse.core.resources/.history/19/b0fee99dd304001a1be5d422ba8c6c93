@@ -1,0 +1,14 @@
+
+public class PlayerTesterAldiano {
+	public static void main(String[] args) {
+		
+		BaseballPlayer baseballPlayer = new BaseballPlayer(1, "Babe Ruth", "Pitcher", 0.123);
+		BasketballPlayer basketballPlayer = new BasketballPlayer(23, "Michael Jordan", "Point Guard", 1.00);
+		
+		
+		
+		
+		System.out.println(basketballPlayer.formatPlayerinformation());
+		System.out.println(baseballPlayer.formatPlayerinformation());
+	}
+}

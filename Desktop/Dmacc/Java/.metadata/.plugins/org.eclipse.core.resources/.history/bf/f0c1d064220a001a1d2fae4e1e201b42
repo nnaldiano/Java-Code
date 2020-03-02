@@ -1,0 +1,10 @@
+
+public class Pancake implements Turner {
+
+	@Override
+	public String turn(String turn) {
+		turn = "Going to next page";
+		return turn;
+	}
+
+}

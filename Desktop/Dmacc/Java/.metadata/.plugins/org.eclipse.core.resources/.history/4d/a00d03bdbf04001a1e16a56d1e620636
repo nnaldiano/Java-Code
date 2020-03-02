@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+public class Roster {
+	private String teamName;
+	private ArrayList<Player> teamList;
+	
+	public void addToTeam(Player p ) {
+		teamList.add(p);
+	}
+	
+	public String displayRoster() {
+		return teamList.toString();
+		
+	}
+}

@@ -1,0 +1,10 @@
+
+public class TicketCounterAldiano {
+	final static int PROCESS = 30;
+	final static 
+
+	public static void main(String[] args) {
+		
+	}
+
+}

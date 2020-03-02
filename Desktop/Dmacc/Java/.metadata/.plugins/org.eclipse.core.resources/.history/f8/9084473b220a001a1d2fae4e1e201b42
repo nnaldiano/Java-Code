@@ -1,0 +1,11 @@
+
+public class Leaf implements Turner {
+
+	@Override
+	public String turn(String turn) {
+		turn = "Changing colors";
+		return turn;
+	}
+	
+
+}

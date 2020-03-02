@@ -1,0 +1,38 @@
+
+import model.Property;
+public class Lease {
+	private String tenantName;
+	private String apartmentNumber;
+	private double monthlyRent;
+	private int leaseTerm;
+	
+	public Lease() {
+		super();
+	}
+	
+	public String getTenantName() {
+		return tenantName;
+	}
+	public void setTenantName(String tenantName) {
+		this.tenantName = tenantName;
+	}
+	public String getApartmentNumber() {
+		return apartmentNumber;
+	}
+	public void setApartmentNumber(String apartmentNumber) {
+		this.apartmentNumber = apartmentNumber;
+	}
+	public double getMonthlyRent() {
+		return monthlyRent;
+	}
+	public void setMonthlyRent(double monthlyRent) {
+		this.monthlyRent = monthlyRent;
+	}
+	public int getLeaseTerm() {
+		return leaseTerm;
+	}
+	public void setLeaseTerm(int leaseTerm) {
+		this.leaseTerm = leaseTerm;
+	}
+	
+}

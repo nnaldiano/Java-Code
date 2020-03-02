@@ -1,0 +1,32 @@
+package Model;
+public class TicketCounter {
+	private int TICKET_AMOUNT = 45;
+	private String ticketInput;	
+	private String var;
+	
+	public TicketCounter() {
+		
+			
+		
+		
+	
+	}
+	
+	public int getTICKET_AMOUNT() {
+		return TICKET_AMOUNT;
+	}
+	public void setTICKET_AMOUNT(int tICKET_AMOUNT) {
+		TICKET_AMOUNT = tICKET_AMOUNT;
+	}
+	public String getTicketInput() {
+		return ticketInput;
+	}
+	public void setTicketInput(String ticketInput) {
+		this.ticketInput = ticketInput;
+	}
+	
+	
+		
+	
+
+}

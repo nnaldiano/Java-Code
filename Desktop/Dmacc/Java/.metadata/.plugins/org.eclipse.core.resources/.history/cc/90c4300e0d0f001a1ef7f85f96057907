@@ -1,0 +1,26 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class BankAccountFrame extends JFrame{
+	private static final int FRAME_WIDTH = 450;
+	private static final int FRAME_HEIGHT = 100;
+	
+	public BankAccountFrame() {
+		createComponents();
+		setSize(FRAME_WIDTH, FRAME_HEIGHT);
+	}
+	
+	
+	private void createComponents() {
+	JButton Withdraw = new JButton("Withdraw");
+	JButton Deposit = new JButton("Deposit");
+	JLabel Balance = new JLabel("Balance: ");
+	JLabel Amount = new JLabel("Amount: ");
+	JTextField AmountText = new JTextField(12);
+	
+	}
+	
+
+}

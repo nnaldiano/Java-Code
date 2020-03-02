@@ -1,0 +1,16 @@
+import java.time.LocalDate;
+
+public class BillfoldTesterAldiano {
+
+	public static void main(String[] args) {
+		CreditCard visaDebitCard = new CreditCard("Noah", "7322 2493 1273 8923", 608);
+		DriverLicense NoahDriverLicense = new DriverLicense("Noah", "1234567", LocalDate.of(2000, 2, 26));
+		
+		Billfold billfold1 = new Billfold();
+		billfold1.addCard(visaDebitCard);
+		billfold1.addCard(NoahDriverLicense);
+		
+		System.out.println(billfold1.formatCards());
+	}
+
+}

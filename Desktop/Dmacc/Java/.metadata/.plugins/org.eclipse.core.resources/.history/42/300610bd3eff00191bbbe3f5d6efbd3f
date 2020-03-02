@@ -1,0 +1,21 @@
+// Noah Aldiano
+public class Card {
+	private String name;
+	
+	public Card() {
+		name = " ";
+	}
+	
+	public Card(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public boolean isExpired() {
+		return false;
+	}
+	public String format() {
+		return "Card holder: " + name;
+	}
+}

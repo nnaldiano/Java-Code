@@ -1,0 +1,31 @@
+package view;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class GamePanel extends JPanel {
+	
+	private JLabel gameTitle = new JLabel("Guess the word!");
+	private JLabel instructionsLabel = new JLabel ("Enter a letter");
+	private JTextField letterGuess = new JTextField(10);
+	private JLabel wordLabel = new JLabel("Word:");
+	private JLabel currentGuessLabel = new JLabel(" ");
+	
+	private JButton submit = new JButton("Submit Letter");
+	private JButton newWord = new JButton("Get a New Word");
+	
+	
+	
+	public GamePanel() {
+		add(gameTitle);
+		add(instructionsLabel);
+		add(letterGuess);
+		add(wordLabel);
+		add(currentGuessLabel);
+		add(submit);
+		add(newWord);
+	}
+
+}

@@ -1,0 +1,119 @@
+package Controller;
+import java.awt.event.ActionListener;    
+import java.awt.event.ActionEvent;
+import java.awt.Dimension;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JProgressBar;
+import Model.TicketCounter;
+
+public class TicketCounterPanel extends JPanel {
+	int ticketProgress = 0;
+	String ticketString = "0";
+	//int progress = 100;
+	
+	
+
+	
+	private JLabel Instructions = new JLabel("Enter how many tickets you'd like to purchase (1-6):");
+	private JTextField ticketInput = new JTextField(12);
+	private JButton purchaseTickets = new JButton("Purchase tickets");
+	private JLabel ticketCounter = new JLabel("");
+	private JLabel TICKETS = new JLabel("");
+	private JLabel ticketWarning = new JLabel("");
+	private JButton clearTicket = new JButton("Clear order");
+	private JProgressBar ticketsLeft = new JProgressBar();
+	private JLabel IMAGE = new JLabel();
+
+	
+	TicketCounter ticket = new TicketCounter();
+	
+	public TicketCounterPanel() {
+		add(Instructions);
+		add(ticketInput);
+		add(purchaseTickets);
+		TICKETS.setText(ticket.getTICKET_TOTAL()+ " tickets available.");
+		add(clearTicket);
+		add(ticketsLeft);
+		add(TICKETS);
+		add(ticketWarning);		
+		ticketsLeft.setMinimum(0);
+		ticketsLeft.setMaximum(45);
+		ticketsLeft.setValue(0);
+		ticketsLeft.setVisible(true);
+		IMAGE.setIcon(new ImageIcon("C:\\Users\\tfose\\Desktop\\Dmacc\\Java\\TicketCounterFinalAldiano"));
+		
+		purchaseTicketsListener ptl = new purchaseTicketsListener();
+		purchaseTickets.addActionListener(ptl);
+		
+		clearTicketListener ctl = new clearTicketListener();
+		clearTicket.addActionListener(ctl);
+		
+		
+		
+		}
+	class purchaseTicketsListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+		int var;
+		int ticketsRemaining;
+		int checkforZero;
+		String Userinput = ticketInput.getText();
+		try {
+		var = Integer.parseInt(Userinput);
+		if(var <= 6 && var >= 1 && ticketProgress != 45) {
+			ticketWarning.setVisible(false);
+			TICKETS.setVisible(true);
+			ticketInput.setText(Userinput);
+			ticketProgress = var + ticketProgress;
+			ticket.setTICKET_INPUT(ticketProgress);
+			ticketsRemaining = ticket.getTICKET_TOTAL() - ticketProgress;
+			ticketsLeft.setValue(ticketProgress);
+			TICKETS.setText(Integer.toString(ticketsRemaining) + " available tickets.");
+			}
+		if(var <= 0) {
+				//ticketInput.setText("");
+				ticketWarning.setVisible(true);
+				ticketWarning.setText("You can't buy a negative amount of tickets.");
+				}
+		if(var > 6) {
+				ticketWarning.setVisible(true);
+				TICKETS.setVisible(false);
+				ticketWarning.setText("There is a limit of 6 tickets per customer");
+				ticketInput.setText("");
+				}
+		if(ticketProgress > 45) {
+				TICKETS.setText("Event sold out!");
+			}
+			
+			
+		}catch (NumberFormatException e) {
+			//ticketCounter.setVisible(false);
+			ticketWarning.setVisible(true);
+			ticketWarning.setText("Please enter an amount of tickets between 1 and 6 that isn't a decimal");
+		}
+	}
+	
+}
+	class clearTicketListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			ticketInput.setText("");
+			ticketWarning.setVisible(false);
+			ticketCounter.setVisible(true);
+			TICKETS.setVisible(true);
+			ticketCounter.setText("0");
+			
+		}
+		
+	}
+
+}

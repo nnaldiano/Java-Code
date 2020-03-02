@@ -1,0 +1,31 @@
+
+public class LeagueTesterAldiano {
+
+	public static void main(String[] args) {
+		Team DuneRatz = new Team("Dune Ratz", 7, "Captain Kadeem");
+		Team Scorchers = new Team("Scorchers", 7, "Captain Taro");
+		Team WaveRippers = new Team("Wave Rippers", 7, "Captain Vert");
+		Team StreetBeasts = new Team("StreetBeasts", 7, "Captain Banjee");
+		
+		Team DuneRatz0 = new Team("Dune Ratz", 7, "Captain Kadeem");
+		Team Scorchers1 = new Team("Scorchers", 7, "Captain Taro");
+		Team WaveRippers2 = new Team("Wave Rippers", 7, "Captain Vert");
+		Team StreetBeasts3 = new Team("StreetBeasts", 7, "Captain Banjee");
+
+		System.out.println(DuneRatz.TeamString());
+		System.out.println(Scorchers.TeamString());
+		System.out.println(WaveRippers.TeamString());
+		System.out.println(StreetBeasts.TeamString());
+		
+		System.out.println(DuneRatz0.TeamString());
+		System.out.println(Scorchers1.TeamString());
+		System.out.println(WaveRippers2.TeamString());
+		System.out.println(StreetBeasts3.TeamString());
+		
+		
+
+		
+
+	}
+
+}

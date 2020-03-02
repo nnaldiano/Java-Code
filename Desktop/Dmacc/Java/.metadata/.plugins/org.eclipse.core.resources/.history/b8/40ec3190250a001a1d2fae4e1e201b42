@@ -1,0 +1,26 @@
+package controller;
+
+import java.util.ArrayList;
+
+public class InstructorFileHelper implements FileHelper {
+
+	
+
+	@Override
+	public ArrayList<?> readFile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean writeFile(ArrayList<?> list) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String doesAFileExist() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

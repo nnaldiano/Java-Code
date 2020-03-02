@@ -1,0 +1,20 @@
+
+public class DMACCOneCard extends Card {
+	private String IDnumber;
+	public DMACCOneCard() {
+		IDnumber = " ";
+	}
+	public DMACCOneCard(String name, String id) {
+		super(name);
+		setIDnumber(id);
+	}
+	public String getIDnumber() {
+		return IDnumber;
+	}
+	public void setIDnumber(String iDnumber) {
+		IDnumber = iDnumber;
+	}
+	public String format() {
+		return "Not set.";
+	}
+}

@@ -1,0 +1,55 @@
+package frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class BankAccountFrame extends JFrame  {
+	BankAccount account;
+	private JButton Withdraw = new JButton("Withdraw");
+	private JButton Deposit = new JButton("Deposit");
+	private JLabel Balance = new JLabel("Balance: ");
+	private JLabel Amount = new JLabel("Amount: ");
+	private JTextField AmountText = new JTextField(12);
+
+public BankAccountFrame(BankAccount b) {
+	account = b;
+	depositClickListener d = new depositClickListener();
+	Deposit.addActionListener(d);
+	JPanel controlPanel = new JPanel();
+	controlPanel.add(Amount);
+	controlPanel.add(AmountText);
+	controlPanel.add(Balance);
+	controlPanel.add(Deposit);
+	controlPanel.add(Withdraw);
+	add(controlPanel);
+	setSize(400,100);
+	
+	String a = Amount.getText();
+	double withdrawAMT = Double.parseDouble(a);
+	
+	
+	
+}
+class depositClickListener implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub	
+	}	
+}
+class withdrawClickListener implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub	
+	}
+}
+	
+	
+
+}

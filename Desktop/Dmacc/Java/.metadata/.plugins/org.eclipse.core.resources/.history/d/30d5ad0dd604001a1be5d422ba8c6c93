@@ -1,0 +1,74 @@
+// Noah Aldiano
+public class Team {
+	private String teamName;
+	private int teamid;
+	private int numberOfPlayers;
+	private String captain;
+	private static int nextteamidNumber = 1000;
+	
+	public Team() {
+		
+	}
+		
+	
+	public Team(String teamName,int numberOfPlayers, String captain) {
+		setTeamName(teamName);
+		setNumberOfPlayers(numberOfPlayers);
+		setCaptain(captain);
+		nextteamidNumber++;
+		this.teamid = nextteamidNumber;
+		if(!teamName.equals(null) && !teamName.equals("")) {
+			this.setTeamName((teamName));
+		}else {
+			throw new IllegalArgumentException();
+		}
+		if(numberOfPlayers != 0) {
+			this.setNumberOfPlayers(numberOfPlayers);
+		}else {
+			throw new IllegalArgumentException("Team cannont be created.");
+		}
+		this.captain = captain;
+	}
+	
+	public String getTeamName() {
+		return teamName;
+	}
+	public void setTeamName(String teamName) {
+		if(!teamName.equals(null) && teamName != "") {
+			this.teamName = teamName;
+		}else {
+			this.teamName = null;
+		}
+		
+	}
+	public int getTeamid() {
+		return teamid;
+	}
+	public int getNumberOfPlayers() {
+		return numberOfPlayers;
+	}
+	public void setNumberOfPlayers(int numberOfPlayers) {
+		if (numberOfPlayers >= 7 & numberOfPlayers <= 13 ) {
+			this.numberOfPlayers = numberOfPlayers;
+		}
+		
+	}
+	public String getCaptain() {
+		return captain;
+	}
+	public void setCaptain(String captain) {
+		this.captain = captain;
+	}
+	
+	public String TeamString() {
+		return "Team ID: " + this.getTeamid() + ", Team Name: " + this.getTeamName() + ", # of Team Members: " + this.getNumberOfPlayers() + ", " + this.getCaptain();
+	}
+
+	@Override
+	public String toString() {
+		return "Team [teamName=" + teamName + ", teamid=" + teamid + ", numberOfPlayers=" + numberOfPlayers
+				+ ", captain=" + captain + ", teamidNumber=" + teamid + "]";
+	}
+	
+	
+}

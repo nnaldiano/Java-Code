@@ -1,0 +1,29 @@
+
+public class BaseballPlayer extends Player {
+	private String battingAverage;
+	
+	public BaseballPlayer() {
+		setBattingAverage(battingAverage);
+	}
+	
+	public BaseballPlayer(String battingAverage) {
+		super();
+		this.battingAverage = battingAverage;
+	}
+
+	public String getBattingAverage() {
+		return battingAverage;
+	}
+
+	public void setBattingAverage(String battingAverage) {
+		this.battingAverage = battingAverage;
+	}
+	
+	public String formatPlayerinformation() {
+		String Formattedplayer = this.getPlayerNumber() + this.getParticipant() + this.getPosition() + this.getBattingAverage();
+		
+	return Formattedplayer;
+	}
+
+
+}

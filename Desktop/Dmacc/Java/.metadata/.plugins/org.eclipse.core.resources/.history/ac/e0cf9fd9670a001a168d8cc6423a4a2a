@@ -1,0 +1,14 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class TicketCounterListener implements ActionListener{
+	private int clicked;
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		clicked++;
+		
+		
+	}
+
+}

@@ -1,0 +1,64 @@
+package tests;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+import Model.Classroom;
+import Model.Instructor;
+import controller.ClassroomFileHelper;
+import Model.Course;
+public class ClassroomTesterAldiano {
+
+	public static void main(String[] args) {
+ClassroomFileHelper cfh = new ClassroomFileHelper();
+		
+		Classroom CompSciLab = new Classroom("8", "17", "Ankeny", "Computer Lab", 25);
+		Classroom BioLab = new Classroom("3", "17", "Ankeny", "Science Lab", 22);
+		Classroom LitRoom = new Classroom("2", "12", "Urban", "Classroom", 18);
+			
+		ArrayList<Classroom> allClassrooms = new ArrayList<Classroom>();
+		allClassrooms.add(BioLab);
+		allClassrooms.add(LitRoom);
+		allClassrooms.add(CompSciLab);
+		
+		System.out.println("Does a Classroom file exist? " + cfh.doesAFileExist());
+		System.out.println("Writing classrooms to file is successful: " +cfh.writeFile(allClassrooms));
+		System.out.println("Does a Classroom file exist after writing to it? " + cfh.doesAFileExist());
+		
+		ArrayList<Classroom> readFile = (ArrayList<Classroom>)cfh.readFile();
+		ArrayList<Classroom> all = readFile;
+		System.out.println("Printing all items in the Classroom file");
+		for(Classroom a: all){
+		System.out.println(a.toString());
+		}
+		System.out.println("---------------");
+		System.out.println();
+
+		/*Classroom CompSciLab = new Classroom();
+		Classroom BioLab = new Classroom("3","28a","Ankeny","Science Lab", 22);
+		Classroom LitRoom = new Classroom("2","12","Urban","Classroom",18);
+		
+		Instructor wsmith = new Instructor("Wanda", "Smith", "");
+		Instructor wfitz = new Instructor("Wilma", "Fitz", "");
+		Instructor etheo = new Instructor("Emily", "Theo", "");
+		
+		Course bio101 = new Course("24680", "BIO101", LocalTime.of(11, 15), LocalTime.of(12,55), wsmith, BioLab);
+		Course cis171 = new Course("23456", "CIS171", LocalTime.of(10, 10), LocalTime.of(12, 20), wfitz, CompSciLab);
+		Course lit105 = new Course("29876", "LIT105", LocalTime.of(15, 15), LocalTime.of(16, 30), etheo, LitRoom);
+		
+		
+		/*System.out.println(CompSciLab.toString());
+		System.out.println(BioLab.toString());
+		System.out.println(LitRoom.toString());
+		System.out.println(wsmith.toString());
+		System.out.println(wfitz.toString());
+		System.out.println(etheo.toString());
+		
+		
+		System.out.println(bio101.toString());
+		System.out.println(cis171.toString());
+		System.out.println(lit105.toString());
+		*/
+		
+	}
+
+}

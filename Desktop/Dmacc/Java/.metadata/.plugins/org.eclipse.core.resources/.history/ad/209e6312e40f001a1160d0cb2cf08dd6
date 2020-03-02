@@ -1,0 +1,20 @@
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class StopLightPanel extends JPanel {
+	
+	StopLightDrawing light = new StopLightDrawing();
+	
+	public StopLightPanel() {
+		JButton changeButton = new JButton("Switch");
+		light.setPreferredSize(new Dimension(160, 260));
+		
+		
+		add(light);
+		add(changeButton);
+		
+	}
+
+}

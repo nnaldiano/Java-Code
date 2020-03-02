@@ -1,0 +1,48 @@
+package Controller;
+import java.awt.event.ActionListener; 
+import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import Model.TicketCounter;
+
+public class TicketCounterPanel extends JPanel {
+	
+	private JLabel Instructions = new JLabel("Enter how many tickets you'd like to purchase (1-6):");
+	private JTextField ticketInput = new JTextField(12);
+	private JButton purchaseTickets = new JButton("Purchase tickets");
+	private JLabel ticketCounter = new JLabel("");
+	private JLabel TICKETS = new JLabel("");
+	
+	TicketCounter ticket = new TicketCounter();
+	
+	public TicketCounterPanel() {
+		add(Instructions);
+		add(ticketInput);
+		add(purchaseTickets);
+		TICKETS.setText(ticket.getTICKET_AMOUNT());
+		add(TICKETS);
+		
+		
+		purchaseTicketsListener ptl = new purchaseTicketsListener();
+		purchaseTickets.addActionListener(ptl);
+		
+		}
+	class purchaseTicketsListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+		String Userinput = ticketInput.getText();
+		TICKETS.setText(Userinput);
+		
+		
+			
+			
+		}
+		
+	}
+
+}

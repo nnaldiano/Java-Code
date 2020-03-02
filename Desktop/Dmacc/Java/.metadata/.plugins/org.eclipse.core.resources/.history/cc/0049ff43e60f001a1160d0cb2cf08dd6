@@ -1,0 +1,10 @@
+import Model.Instructor;
+
+public class InstructorExperimental {
+
+	public static void main(String[] args) {
+		Instructor Bob = new Instructor("Bob", "James");
+		System.out.println(Bob);
+	}
+
+}

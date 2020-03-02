@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Desktop.java&apos; to &apos;WebScrapper/src/WebScrappertest&apos;&#x0D;&#x0A;- Original project: &apos;WebScrapper&apos;&#x0D;&#x0A;- Destination element: &apos;WebScrapper/src/WebScrappertest&apos;&#x0D;&#x0A;- Original element: &apos;Desktop.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;WebScrappertest" element1="/src&lt;{Desktop.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1576460954389" units="1" version="1.0"/>
+</session>

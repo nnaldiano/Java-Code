@@ -1,0 +1,12 @@
+import model.House;
+import model.Unit;
+public class RentalTester {
+
+	public static void main(String[] args) {
+		Unit forest = new Unit("123 Forest", 2, true, 900.00,2,1.5, true);
+		
+		House franklin = new House("123 Forest", 1, false, 1000,2,1,true);
+		
+	}
+
+}

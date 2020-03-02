@@ -1,0 +1,46 @@
+// Noah Aldiano
+public class Player {
+	private String PlayerNumber;
+	private String Participant;
+	private String Position;
+	
+	public Player() {
+		setPlayerNumber("1");
+		setParticipant("Noah");
+		setPosition("1");
+	}
+	
+	public Player(String playerNumber, String participant, String position) {
+		super();
+		PlayerNumber = playerNumber;
+		Participant = participant;
+		Position = position;
+	}
+
+
+
+
+
+	public String getPlayerNumber() {
+		return PlayerNumber;
+	}
+	public void setPlayerNumber(String playerNumber) {
+		PlayerNumber = playerNumber;
+	}
+	public String getParticipant() {
+		return Participant;
+	}
+	public void setParticipant(String participant) {
+		Participant = participant;
+	}
+	public String getPosition() {
+		return Position;
+	}
+	public void setPosition(String position) {
+		Position = position;
+	}
+	@Override
+	public String toString() {
+		return "Player [PlayerNumber=" + PlayerNumber + ", Participant=" + Participant + ", Position=" + Position + "]";
+	}
+}

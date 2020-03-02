@@ -1,0 +1,9 @@
+
+public class PlayerTesterAldiano {
+
+	public static void main(String[] args) {
+		Player BabeRuth = new Player("1");
+		
+		System.out.println(BabeRuth.ba);
+	}
+}
